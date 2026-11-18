@@ -56,10 +56,15 @@ header p::first-letter {
     margin: 1em;
 }
 
-header a {
+header p a {
     text-decoration: none;
     color: #dddbff;
     text-transform: uppercase;
+}
+
+header a {
+    text-decoration: none;
+    color: #dddbff;
 }
 
 header li:hover {
