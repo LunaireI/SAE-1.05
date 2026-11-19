@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Mason';
+    src: url('./fonts/mason_2/Mason-bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, header, footer {
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Mason', serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 1.5em;
+    font-size: 16px;
+}
+
+/* HEADER  */
+header {
+    padding: 1em 20px 1em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #dddbff;
+    background-color: #482e23;
+    font-size: 1.5em;
+}
+
+header p::first-letter {
+    background-color: #113f83;
+    border: solid 2px #dddbff;
+    padding: 0.5em 0.7em;
+    margin: 1em;
+}
+
+header p a {
+    text-decoration: none;
+    color: #dddbff;
+    text-transform: uppercase;
+}
+
+header a {
+    text-decoration: none;
+    color: #dddbff;
+}
+
+header li:hover {
+    border-bottom: solid 2px #dddbff;
+    color: #dddbff;
+}
+
+header ul {
+    display: flex;
+    gap: 3em;
+    list-style: none;
+    color: lightgrey;
+}
+
+header nav {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+/* DIV */
+div.top {
+    background-color: #113f83;
+    color: #dddbff;
+    padding: 2.5em 20%;
+    border-bottom: solid 4px #6B0000;
+    overflow: auto;
+}
+
+div.top h1 {
+    margin: 0.15em 0 0.3em 0;
+}
+
+/* MAIN */
+
+main {
+    background-color: #6b94d1;
+    padding: 2em 20% 2em 20%;
+}
+
+main h1 {
+    margin: 0;
+}
+
+main figure {
+    margin: 0;
+}
+
+main ul {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+}
+
+main ul li {
+    border: solid 1px #113f83;
+}
+
+main ul figure img {
+    width: 100%;
+    height: 25em;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+main ul figcaption {
+    padding: 0.6em;
+    text-transform: uppercase;
+}
+
+main ul figcaption::first-line {
+    font-family: 'Mason';
+    font-weight: bold;
+    font-size: 2em;
+}
+
+main ul figure {
+    position: relative;
+    margin: 0;
+}
+
+main ul figure div {
+    position: absolute;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    box-sizing: border-box; 
+    background-color: #6B0000; 
+    color: #dddbff;
+    padding: 1em;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+main ul figure:hover div {
+    opacity: 1;
+}
+
+main ul div p::first-line {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+main ul div a {
+    color: #dddbff;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #482e23;
+    padding: 2em 0;
+    margin: 0;
+}
+
+footer h2, footer p, footer a {
+    color: #dddbff;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+footer a:hover {
+    border-bottom: solid 1px #dddbff;
+}
