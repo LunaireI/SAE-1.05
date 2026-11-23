@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Mason';
-    src: url('./fonts/mason_2/Mason-bold.otf') format('opentype');
+    src: url('../fonts/mason_2/Mason-bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -106,6 +106,59 @@ main {
 
 main h1 {
     margin: 0;
+    border-bottom: solid 2px #6B0000;
+}
+
+/* main div:first-of-type {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+} */
+
+main img {
+    float: left;
+    clear: left;
+}
+
+.description, .infos {
+    display: grid;
+    grid-template-columns: 25% 80%;
+}
+
+.description-border {
+    border: solid 2px #113f83;
+    padding: 1em;
+}
+
+table {
+    border: solid 2px #113f83;
+}
+
+blockquote {
+    background-color: #113f83;
+    color: #dddbff;
+    padding: 1em;
+    text-align: center; 
+}
+
+main ul {
+    list-style: none;
+    color: #113f83;
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+}
+
+main li {
+    border: solid 2px #6B0000;
+    background-color: #dddbff;
+    padding: 0.5em 0.8em;
+}
+
+main a {
+    border: solid 2px #dddbff;
+    background-color: #6B0000;
+    color: #dddbff;
+    padding: 0.5em 0.8em;
 }
 
 /* FOOTER */
