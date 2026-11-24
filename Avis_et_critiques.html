@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Critiques et avis - Game of Thrones</title>
+    <meta name="description" content="Comparez l'avis de la presse et celui des spectateurs sur la série Game of Thrones.">
+    <meta name="keywords" content="game of thrones, série, critiques, avis, presse, spectateurs">
+    <meta name="author" content="SAÉ 1.05 Groupe C12">
+    <link rel="stylesheet" type="text/css" href="style_avis_et_critique.css">
+</head>
+<body>
+
+    <!-- ========== EN-TÊTE ========== -->
+    <header class="entete">
+        <div class="conteneur entete-contenu">
+            <div class="logo">
+                <span class="logo-badge">GOT</span>
+                <span class="logo-texte">Game of Thrones</span>
+            </div>
+
+            <!-- Menu principal -->
+            <nav class="menu">
+                <a href="index.html">Accueil</a>
+                <a href="saisons.html">Les saisons</a>
+                <a href="critiques.html" class="actif">Critiques et avis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========== BANDEAU TITRE ========== -->
+        <section class="bandeau">
+            <div class="conteneur">
+                <h1>Critiques et avis</h1>
+                <p>Comparez l'avis de la presse et celui des spectateurs.</p>
+            </div>
+        </section>
+
+        <div class="conteneur contenu">
+
+            <!-- ========== LA PRESSE ========== -->
+            <section id="presse">
+                <h2>La presse</h2>
+
+                <p class="note-presse"><strong>4,1/5</strong> <span>· 48 médias</span></p>
+
+                <div class="grille-presse">
+                    <article class="carte critique">
+                        <div class="critique-entete">
+                            <h3>Télérama</h3>
+                            <span class="etoiles" title="Note : 4,5 sur 5">★★★★<span class="demi"><span class="demi-pleine">★</span>☆</span></span>
+                        </div>
+                        <p>Une fresque politique et humaine d'une ampleur rare à la télévision.</p>
+                    </article>
+
+                    <article class="carte critique">
+                        <div class="critique-entete">
+                            <h3>Le Monde</h3>
+                            <span class="etoiles" title="Note : 4 sur 5">★★★★☆</span>
+                        </div>
+                        <p>Une écriture qui fait des intrigues de cour un spectacle haletant.</p>
+                    </article>
+
+                    <article class="carte critique">
+                        <div class="critique-entete">
+                            <h3>Les Inrockuptibles</h3>
+                            <span class="etoiles" title="Note : 4,5 sur 5">★★★★<span class="demi"><span class="demi-pleine">★</span>☆</span></span>
+                        </div>
+                        <p>Un monde dense, des personnages inoubliables et une mise en scène soignée.</p>
+                    </article>
+
+                    <article class="carte critique">
+                        <div class="critique-entete">
+                            <h3>Première</h3>
+                            <span class="etoiles" title="Note : 3,5 sur 5">★★★<span class="demi"><span class="demi-pleine">★</span>☆</span>☆</span>
+                        </div>
+                        <p>Spectaculaire et ambitieuse, malgré une fin de parcours inégale.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ========== LES SPECTATEURS ========== -->
+            <section id="spectateurs">
+                <h2>Les spectateurs</h2>
+
+                <!-- Note moyenne + répartition des notes -->
+                <div class="carte resume">
+                    <div class="moyenne">
+                        <p class="moyenne-chiffre">4,1</p>
+                        <p class="etoiles etoiles-grandes" title="Note moyenne : 4,1 sur 5">★★★★☆</p>
+                        <p class="moyenne-total">20&nbsp;500 avis</p>
+                    </div>
+
+                    <div class="repartition">
+                        <div class="ligne-note">
+                            <span>5/5</span>
+                            <span class="barre"><span class="remplissage remplissage-5"></span></span>
+                            <span class="nombre">9&nbsp;800</span>
+                        </div>
+                        <div class="ligne-note">
+                            <span>4/5</span>
+                            <span class="barre"><span class="remplissage remplissage-4"></span></span>
+                            <span class="nombre">6&nbsp;100</span>
+                        </div>
+                        <div class="ligne-note">
+                            <span>3/5</span>
+                            <span class="barre"><span class="remplissage remplissage-3"></span></span>
+                            <span class="nombre">2&nbsp;400</span>
+                        </div>
+                        <div class="ligne-note">
+                            <span>2/5</span>
+                            <span class="barre"><span class="remplissage remplissage-2"></span></span>
+                            <span class="nombre">1&nbsp;300</span>
+                        </div>
+                        <div class="ligne-note">
+                            <span>1/5</span>
+                            <span class="barre"><span class="remplissage remplissage-1"></span></span>
+                            <span class="nombre">900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ancres des filtres : quand un lien du menu pointe vers l'une
+                     d'elles, elle devient :target et le CSS filtre les avis
+                     placés après (sélecteur ~) -->
+                <div class="ancre" id="saison-1"></div>
+                <div class="ancre" id="saison-2"></div>
+                <div class="ancre" id="saison-3"></div>
+                <div class="ancre" id="saison-4"></div>
+                <div class="ancre" id="saison-5"></div>
+                <div class="ancre" id="saison-6"></div>
+                <div class="ancre" id="saison-7"></div>
+                <div class="ancre" id="saison-8"></div>
+                <div class="ancre" id="note-5"></div>
+                <div class="ancre" id="note-4"></div>
+                <div class="ancre" id="note-3"></div>
+                <div class="ancre" id="note-2"></div>
+                <div class="ancre" id="note-1"></div>
+
+                <!-- Filtres (menus déroulants) -->
+                <div class="filtres" id="filtres">
+                    <details class="filtre">
+                        <summary>Toutes les saisons <span class="fleche">▾</span></summary>
+                        <div class="menu-filtre">
+                            <a href="#filtres">Toutes les saisons</a>
+                            <a href="#saison-1">Saison 1</a>
+                            <a href="#saison-2">Saison 2</a>
+                            <a href="#saison-3">Saison 3</a>
+                            <a href="#saison-4">Saison 4</a>
+                            <a href="#saison-5">Saison 5</a>
+                            <a href="#saison-6">Saison 6</a>
+                            <a href="#saison-7">Saison 7</a>
+                            <a href="#saison-8">Saison 8</a>
+                        </div>
+                    </details>
+
+                    <details class="filtre">
+                        <summary>Toutes les notes <span class="fleche">▾</span></summary>
+                        <div class="menu-filtre">
+                            <a href="#filtres">Toutes les notes</a>
+                            <a href="#note-5">5 étoiles</a>
+                            <a href="#note-4">4 étoiles</a>
+                            <a href="#note-3">3 étoiles</a>
+                            <a href="#note-2">2 étoiles</a>
+                            <a href="#note-1">1 étoile</a>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Liste des avis : les classes saison-X et note-X servent aux filtres -->
+                <div class="liste-avis">
+                    <article class="carte avis saison-3 note-5">
+                        <div class="avis-entete">
+                            <p><strong>Arya_83</strong> <span class="avis-infos">· 42 avis · Saison 3</span></p>
+                            <time datetime="2024-03-12">12 mars 2024</time>
+                        </div>
+                        <p class="etoiles" title="Note : 5 sur 5">★★★★★</p>
+                        <p>Une saison magistrale, l'une des meilleures de la série.</p>
+                    </article>
+
+                    <article class="carte avis saison-1 note-4">
+                        <div class="avis-entete">
+                            <p><strong>LaMaesterie</strong> <span class="avis-infos">· 17 avis · Saison 1</span></p>
+                            <time datetime="2024-02-03">3 février 2024</time>
+                        </div>
+                        <p class="etoiles" title="Note : 4 sur 5">★★★★☆</p>
+                        <p>Une mise en place patiente qui prend tout son sens au revisionnage.</p>
+                    </article>
+
+                    <article class="carte avis saison-8 note-2">
+                        <div class="avis-entete">
+                            <p><strong>Ser_Cinephile</strong> <span class="avis-infos">· 63 avis · Saison 8</span></p>
+                            <time datetime="2024-01-28">28 janvier 2024</time>
+                        </div>
+                        <p class="etoiles" title="Note : 2 sur 5">★★☆☆☆</p>
+                        <p>Une conclusion précipitée qui ne rend pas justice aux personnages.</p>
+                    </article>
+
+                    <article class="carte avis saison-6 note-5">
+                        <div class="avis-entete">
+                            <p><strong>DracarysFan</strong> <span class="avis-infos">· 9 avis · Saison 6</span></p>
+                            <time datetime="2023-12-15">15 décembre 2023</time>
+                        </div>
+                        <p class="etoiles" title="Note : 5 sur 5">★★★★★</p>
+                        <p>Une réalisation époustouflante, surtout le final.</p>
+                    </article>
+
+                    <article class="carte avis saison-6 note-4">
+                        <div class="avis-entete">
+                            <p><strong>NordSouvenir</strong> <span class="avis-infos">· 28 avis · Saison 6</span></p>
+                            <time datetime="2023-12-02">2 décembre 2023</time>
+                        </div>
+                        <p class="etoiles" title="Note : 4 sur 5">★★★★☆</p>
+                        <p>Des personnages qui évoluent de façon crédible.</p>
+                    </article>
+                </div>
+
+                <p class="aucun-avis">Aucun avis ne correspond à ce filtre.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ========== PIED DE PAGE ========== -->
+    <footer class="pied">
+        <p class="pied-titre">Game of Thrones</p>
+
+        <nav class="pied-liens">
+            <a href="index.html">Accueil</a>
+            <a href="saisons.html">Les saisons</a>
+            <a href="critiques.html">Critiques et avis</a>
+        </nav>
+
+        <p class="pied-liens pied-legal">
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="conditions.html">Conditions d'utilisation</a>
+            <a href="a-propos.html">À propos</a>
+        </p>
+
+        <p class="copyright">Copyright Seriesly 2024 · SAÉ 1.05 Groupe C12</p>
+    </footer>
+
+</body>
+</html>

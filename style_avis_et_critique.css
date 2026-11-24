@@ -1,0 +1,548 @@
+/* ==========================================================
+   Game of Thrones - Critiques et avis
+   ========================================================== */
+
+/* ---------- Polices ---------- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat-800.woff2') format('woff2'),
+         url('fonts/montserrat-800.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat-900.woff2') format('woff2'),
+         url('fonts/montserrat-900.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* ---------- Variables ---------- */
+:root {
+    --marron: #482e23;          /* en-tête et pied de page */
+    --bleu-fonce: #113f83;      /* bandeau titre */
+    --bleu: #6b94d1;            /* fond de la page */
+    --ligne: #3e66a6;           /* trait sous les titres */
+    --separateur: #7b7384;      /* trait sous le bandeau */
+    --bordure-carte: rgba(255, 255, 255, 0.45);
+    --etoile: #f5ad94;
+    --fond-barre: #141414;
+    --rouge: #6b0000;
+    --fond-filtre: #121212;
+    --blanc: #ffffff;
+    --texte-clair: #e6eefb;
+    --lien: #e4def4;
+    --police-titre: 'Montserrat', 'Arial Black', arial, sans-serif;
+    --police-texte: arial, helvetica, sans-serif;
+}
+
+/* ---------- Initialisateur ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--police-texte);
+    line-height: 1.5;
+    color: var(--blanc);
+    background-color: var(--bleu);
+}
+
+h1, h2, h3 {
+    font-family: var(--police-titre);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+/* Etat des liens : ordre link, visited, hover, active */
+a:link, a:visited {
+    color: var(--lien);
+}
+
+a:hover, a:active {
+    color: var(--blanc);
+}
+
+/* Zone centrée */
+.conteneur {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+/* ---------- En-tête ---------- */
+.entete {
+    background-color: var(--marron);
+}
+
+.entete-contenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-badge {
+    margin-right: 0.7em;
+    padding: 0.2em 0.55em;
+    background-color: var(--bleu-fonce);
+    border: 2px solid #3f67a8;
+    font-family: var(--police-titre);
+    font-size: 0.7em;
+    font-weight: 800;
+    color: var(--blanc);
+}
+
+.logo-texte {
+    font-family: var(--police-titre);
+    font-size: 1.05em;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--blanc);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    margin-left: 2em;
+    padding: 0.35em 0;
+    font-size: 0.85em;
+    transition: color 0.2s ease;
+}
+
+.menu a.actif {
+    padding: 0.35em 1.1em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    color: var(--blanc);
+}
+
+/* ---------- Bandeau titre ---------- */
+.bandeau {
+    padding: 3em 0 3.5em;
+    background-color: var(--bleu-fonce);
+    border-bottom: 2px solid var(--separateur);
+}
+
+.bandeau h1 {
+    margin-bottom: 0.2em;
+    font-size: 3.1em;
+}
+
+.bandeau p {
+    font-size: 0.9em;
+    color: var(--texte-clair);
+}
+
+/* ---------- Contenu ---------- */
+.contenu {
+    padding-top: 2.5em;
+    padding-bottom: 3.5em;
+}
+
+#spectateurs {
+    margin-top: 3em;
+}
+
+h2 {
+    margin-bottom: 0.7em;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid var(--ligne);
+    font-size: 2.1em;
+}
+
+/* Cadre commun aux cartes */
+.carte {
+    border: 2px solid var(--bordure-carte);
+    background-color: rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.carte:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+
+/* ---------- Etoiles ---------- */
+.etoiles {
+    font-family: 'Segoe UI Symbol', 'DejaVu Sans', arial, sans-serif;
+    font-size: 1em;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: var(--etoile);
+}
+
+.etoiles-grandes {
+    font-size: 1.2em;
+}
+
+/* Demi-étoile : une étoile pleine coupée à 50 % posée sur une étoile vide */
+.demi {
+    position: relative;
+    display: inline-block;
+}
+
+.demi-pleine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+}
+
+/* ---------- La presse ---------- */
+.note-presse {
+    margin-bottom: 0.9em;
+}
+
+.note-presse strong {
+    font-family: var(--police-titre);
+    font-size: 1.6em;
+    font-weight: 800;
+}
+
+.note-presse span {
+    font-size: 0.75em;
+}
+
+.grille-presse {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+}
+
+.critique {
+    padding: 1.1em 1.4em 1.3em;
+}
+
+.critique-entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.55em;
+}
+
+.critique h3 {
+    margin-right: 1em;
+    font-size: 1.05em;
+}
+
+/* Les étoiles ne rétrécissent pas : elles restent sur une seule ligne */
+.critique-entete .etoiles {
+    flex-shrink: 0;
+}
+
+.critique p {
+    font-size: 0.85em;
+}
+
+/* ---------- Les spectateurs : résumé ---------- */
+.resume {
+    display: grid;
+    grid-template-columns: 13em 1fr;
+    grid-gap: 2em;
+    align-items: center;
+    padding: 1.5em 1.8em;
+}
+
+.moyenne-chiffre {
+    margin-bottom: 0.1em;
+    font-family: var(--police-titre);
+    font-size: 3.8em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.moyenne-total {
+    margin-top: 0.7em;
+    font-size: 0.8em;
+}
+
+.ligne-note {
+    display: grid;
+    grid-template-columns: 2.5em 1fr 4.5em;
+    grid-column-gap: 1em;
+    align-items: center;
+    margin-bottom: 0.55em;
+    font-size: 0.8em;
+}
+
+.ligne-note:last-child {
+    margin-bottom: 0;
+}
+
+.nombre {
+    text-align: right;
+}
+
+.barre {
+    display: block;
+    height: 14px;
+    background-color: var(--fond-barre);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.remplissage {
+    display: block;
+    height: 100%;
+    background-color: var(--rouge);
+    transform-origin: left center;
+    animation: remplir 1.2s ease-out;
+}
+
+/* Largeur = nombre d'avis / nombre d'avis de la note la plus donnée (9 800) */
+.remplissage-5 { width: 100%; }
+.remplissage-4 { width: 62.2%; }
+.remplissage-3 { width: 24.5%; }
+.remplissage-2 { width: 13.3%; }
+.remplissage-1 { width: 9.2%; }
+
+/* Les barres se remplissent à l'ouverture de la page */
+@keyframes remplir {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* ---------- Filtres (menus déroulants) ---------- */
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.6em 0 1.2em;
+}
+
+.filtre {
+    position: relative;
+    margin-right: 1em;
+}
+
+.filtre summary {
+    display: block;           /* enlève le triangle par défaut */
+    padding: 0.6em 1.1em;
+    background-color: var(--fond-filtre);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.8em;
+    transition: border-color 0.2s ease;
+}
+
+.filtre summary:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.fleche {
+    margin-left: 0.8em;
+}
+
+/* Liste qui s'ouvre sous le bouton */
+.menu-filtre {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    min-width: 100%;
+    background-color: var(--fond-filtre);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 0;
+}
+
+.menu-filtre a {
+    display: block;
+    padding: 0.45em 1.1em;
+    font-size: 0.8em;
+}
+
+.menu-filtre a:hover {
+    background-color: var(--bleu-fonce);
+}
+
+/* Fonctionnement des filtres avec :target et ~
+   1. si une ancre de filtre est ciblée, on cache tous les avis
+   2. puis on réaffiche ceux qui ont la classe correspondante */
+.ancre:target ~ .liste-avis article {
+    display: none;
+}
+
+#saison-1:target ~ .liste-avis .saison-1,
+#saison-3:target ~ .liste-avis .saison-3,
+#saison-6:target ~ .liste-avis .saison-6,
+#saison-8:target ~ .liste-avis .saison-8,
+#note-5:target ~ .liste-avis .note-5,
+#note-4:target ~ .liste-avis .note-4,
+#note-2:target ~ .liste-avis .note-2 {
+    display: block;
+}
+
+/* Message affiché pour les filtres qui n'ont aucun avis
+   (à mettre à jour si vous ajoutez des avis) */
+.aucun-avis {
+    display: none;
+    padding: 1.2em;
+    border: 2px dashed var(--bordure-carte);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#saison-2:target ~ .aucun-avis,
+#saison-4:target ~ .aucun-avis,
+#saison-5:target ~ .aucun-avis,
+#saison-7:target ~ .aucun-avis,
+#note-3:target ~ .aucun-avis,
+#note-1:target ~ .aucun-avis {
+    display: block;
+}
+
+/* ---------- Avis ---------- */
+.liste-avis {
+    display: grid;
+    grid-row-gap: 0.9em;
+}
+
+.avis {
+    padding: 1em 1.4em 1.15em;
+}
+
+.avis-entete {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.avis-entete strong {
+    font-size: 0.95em;
+}
+
+.avis-infos,
+.avis time {
+    font-size: 0.72em;
+}
+
+.avis .etoiles {
+    margin: 0.35em 0 0.6em;
+    font-size: 1em;
+}
+
+.avis p {
+    font-size: 0.85em;
+}
+
+.avis .avis-entete p {
+    margin-right: 1em;
+    font-size: 1em;
+}
+
+/* ---------- Pied de page ---------- */
+.pied {
+    padding: 2.5em 1.5em 3em;
+    background-color: var(--marron);
+    text-align: center;
+}
+
+.pied-titre {
+    margin-bottom: 0.7em;
+    font-family: var(--police-titre);
+    font-size: 1.2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pied-liens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.45em 0;
+    font-size: 0.8em;
+}
+
+/* Trait vertical entre deux liens qui se suivent */
+.pied-liens a + a {
+    margin-left: 0.9em;
+    padding-left: 0.9em;
+    border-left: 1px solid #8fb0e6;
+}
+
+.pied-legal a + a {
+    margin-left: 0.35em;
+    padding-left: 0.35em;
+}
+
+.copyright {
+    margin-top: 0.9em;
+    font-size: 0.78em;
+    color: var(--lien);
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 780px) {
+    .entete-contenu {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.9em 1.5em;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.5em;
+    }
+
+    .menu a {
+        margin: 0 0.6em;
+    }
+
+    .bandeau {
+        padding: 2.2em 0 2.5em;
+    }
+
+    .bandeau h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .grille-presse {
+        grid-template-columns: 1fr;
+    }
+
+    .resume {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5em;
+        padding: 1.3em;
+    }
+
+    .moyenne {
+        text-align: center;
+    }
+
+    .ligne-note {
+        grid-template-columns: 2.2em 1fr 3.8em;
+        grid-column-gap: 0.7em;
+    }
+
+    .filtre {
+        margin-bottom: 0.8em;
+    }
+}
