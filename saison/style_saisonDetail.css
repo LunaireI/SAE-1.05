@@ -161,6 +161,41 @@ main a {
     padding: 0.5em 0.8em;
 }
 
+main ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 2em 0;
+}
+
+main ul li {
+    border: solid 1px #113f83;
+}
+
+main ul figure {
+    margin: 0;
+}
+
+main ul img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+main ul figcaption {
+    padding: 0.6em;
+    font-size: 0.85em;
+    line-height: 1.3em;
+}
+
+main ul figcaption::first-line {
+    font-weight: bold;
+}
+
 /* FOOTER */
 
 footer {
