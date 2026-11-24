@@ -293,6 +293,23 @@ main section.maisons article img {
     margin: 0 1em 1em 0;
 }
 
+.maisons .maisonEntete-text  {
+    padding: 0.5em;
+}
+.maisons .maisonEntete h3 {
+    margin: 0;
+}
+main section.maisons div.maisonEntete {
+    display: grid;
+    grid-template-columns: 65px 1fr
+}
+
+main section.maisons div.maisonEntete-text {
+    display: grid;
+    grid-template-rows: 1fr 1fr
+}
+
+
 main ul {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
